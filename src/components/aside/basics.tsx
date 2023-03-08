@@ -16,7 +16,7 @@ export const Basics = component$(() => {
         label="Básicos"
         dropdownId={dropdownId}
       />
-      <ul id={dropdownId} class="hidden py-1 space-y-2">
+      <ul id={dropdownId} class="py-1 space-y-2">
         {basics.map((element) => (
           <li key={element.id}>
             <Link

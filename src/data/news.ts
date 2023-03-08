@@ -33,4 +33,15 @@ export const news = [
     ],
     version: "v.0.4.0",
   },
+  {
+    id: 5,
+    date: "08.03.2023",
+    actions: [
+      "Creación del contenido para la ruta de Requisitos del sistema",
+      "Creación del contenido para la ruta de Primeros pasos",
+      "Creación del contenido para la ruta de Componentes",
+      "Reemplazar useBrowserVisibleTask$ con useVisibleTask$",
+    ],
+    version: "v.0.5.0",
+  },
 ];

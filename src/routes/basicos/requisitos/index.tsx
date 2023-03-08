@@ -1,11 +1,11 @@
-import { component$, useBrowserVisibleTask$ } from "@builder.io/qwik";
+import { component$, useVisibleTask$ } from "@builder.io/qwik";
 import hljs from "highlight.js";
 import typescript from "highlight.js/lib/languages/typescript";
 import "highlight.js/styles/mono-blue.css";
 import Pagination from "~/components/pagination";
 
 export default component$(() => {
-  useBrowserVisibleTask$(() => {
+  useVisibleTask$(() => {
     hljs.registerLanguage("typescript", typescript);
     hljs.highlightAll();
   });

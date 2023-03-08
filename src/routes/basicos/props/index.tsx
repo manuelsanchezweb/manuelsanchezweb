@@ -3,7 +3,6 @@ import { DocumentHead } from "@builder.io/qwik-city";
 import hljs from "highlight.js";
 import typescript from "highlight.js/lib/languages/typescript";
 import "highlight.js/styles/mono-blue.css";
-import CustomLink from "~/components/custom-link";
 import Pagination from "~/components/pagination";
 
 export default component$(() => {
@@ -14,13 +13,7 @@ export default component$(() => {
 
   return (
     <div>
-      <h1>Componentes Qwik</h1>
-      <CustomLink
-        url="https://github.com/manuelsanchezweb/qwik-curso-principiantes/tree/lection/components"
-        text="Enlace al repositorio"
-        icon="github"
-      />
-
+      <h1>Props</h1>
       <p>
         Lo primero que vamos a hacer es eliminar las rutas y los archivos de
         Qwik que venían con la plantilla. Vamos a dejar casi vacío el{" "}
@@ -82,66 +75,12 @@ export default component$(() => {
         al principio, entonces haciendo <code>q-</code> debería salirte la
         sugerencia del snippet de código.
       </p>
-      <figure>
-        <img
-          src="../../img/qwik-extensions-show.png"
-          alt="Cómo activar el snippet de código de Qwik"
-        />
-      </figure>
-      <p>Tienes dos formas de declarar el componente:</p>
-      <pre style="tab-size: 2;">
-        <code lang="tsx">
-          {`
-    // Path: src/components/headline/index.tsx
-    import { component$ } from "@builder.io/qwik";
 
-    // Forma 1: Con export default
-    export default component$(() => {
-      return <div>Hello Qwik!</div>;
-    });
-
-    // Forma 2: Con export const y el nombre del componente
-    export const Headline = component$(() => {
-      return <div>Hello Qwik!</div>;
-    });
-      
-          `}
-        </code>
-      </pre>
-      <p>
-        Elijas la forma que elijas, ya podrás importar el archivo en nuestro{" "}
-        <code>index.tsx</code> dentro de routes. Para hacer un import de forma
-        automática, usa el símbolo <code>&lt;</code> y empieza a escribir el
-        nombre del componente, en este caso <strong>Headline</strong>, y te
-        deberá salir la sugerencia de import.
-      </p>
-      <figure>
-        <img
-          src="../../img/vscode-autoimport.png"
-          alt="Cómo activar sugerencia de import con VSCode"
-        />
-      </figure>
-      <p>
-        <strong>IMPORTANTE: </strong>es cierto que ver tanto mismo archivo
-        llamado index.tsx puede llegar a causar confusión. Cuesta un poco
-        acostumbrarse al principio, pero el orden establecido a través del
-        sistema de rutas con las carpetas compensa.
-      </p>
-      <p>
-        En el vídeo de la explicación con los componentes hablamos además de qué
-        es la <strong>component rendering function</strong>, de las limitaciones
-        que tiene el return al solo permitir un <strong>JSX node</strong>, y de
-        cómo podemos solventar eso a través de <strong>fragments</strong>.
-      </p>
-      <p>
-        En la siguiente lección vamos a crear componentes dinámicos, y vamos a
-        hablar entonces de un tema muy importante: <strong>props</strong>.
-      </p>
       <Pagination
-        buttonPrevUrl="/basicos/primeros-pasos/"
-        buttonPrevLabel="Volver a los primeros pasos"
-        buttonNextUrl="/basicos/props"
-        buttonNextLabel="Props"
+        buttonPrevUrl="/basicos/componentes-qwik/"
+        buttonPrevLabel="Volver a ver Componentes"
+        buttonNextUrl="/basicos/qwik-ssr"
+        buttonNextLabel="Server Side Rendering"
       />
     </div>
   );

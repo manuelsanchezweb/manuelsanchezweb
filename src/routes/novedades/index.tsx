@@ -9,7 +9,7 @@ export default component$(() => {
     <>
       <h1>Estas son las novedades</h1>
 
-      <h2>Logs del curso</h2>
+      <h2>Lista de logs</h2>
       <dl>
         {sortedNews.map((newsElement) => (
           <div

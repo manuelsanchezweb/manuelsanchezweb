@@ -23,8 +23,8 @@ export const AsideListItemDropdown = component$(
     return (
       <div class="flex justify-between w-full">
         <Link
-          class={`flex w-full p-2 ${
-            locationUrl == url ? "!font-semibold" : ""
+          class={`flex w-full p-2 hover:font-bold hover:text-gray-900 focus:text-gray-900 ${
+            locationUrl == url ? "!font-bold" : ""
           }`}
           href={url}
         >

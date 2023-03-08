@@ -73,12 +73,16 @@ p {
   @apply mb-6 md:text-lg;
 }
 
+figure {
+  @apply mb-6;
+}
+
 .custom-link {
   @apply gap-2 inline-flex items-center px-4 py-2 mt-2 mb-4 mr-3 text-sm font-medium text-gray-500 hover:text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100;
 }
 
 pre {
-  @apply my-4;
+  @apply my-4 max-w-[90vw] sm:max-w-[330px] md:max-w-[450px] lg:max-w-[90vw];
 }
 
 pre code {

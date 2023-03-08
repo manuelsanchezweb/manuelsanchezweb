@@ -2,8 +2,8 @@ import {
   $,
   component$,
   Slot,
-  useBrowserVisibleTask$,
   useOnWindow,
+  useVisibleTask$,
 } from "@builder.io/qwik";
 import Aside from "~/components/aside";
 import Navigation from "~/components/navigation";
@@ -31,7 +31,7 @@ export default component$(() => {
     })
   );
 
-  useBrowserVisibleTask$(() => {
+  useVisibleTask$(() => {
     initHandleLinks();
   });
 
