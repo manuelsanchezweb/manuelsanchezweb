@@ -14,4 +14,23 @@ export const news = [
     ],
     version: "v.0.2.0",
   },
+  {
+    id: 3,
+    date: "08.03.2023",
+    actions: [
+      "Importar sin SSR un syntax highlighter para code snippets",
+      "Crear un protocomponente que sirva de pagination",
+    ],
+    version: "v.0.3.0",
+  },
+  {
+    id: 4,
+    date: "08.03.2023",
+    actions: [
+      "Mejorar el syntax highlighter para code snippets (still no SSR)",
+      "Preparar las páginas para el contenido del curso básico",
+      "Preparar las páginas para de los proyectos del curso avanzado",
+    ],
+    version: "v.0.4.0",
+  },
 ];

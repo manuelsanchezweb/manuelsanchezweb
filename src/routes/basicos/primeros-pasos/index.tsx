@@ -5,9 +5,7 @@ const code = "p { color: red }";
 export default component$(() => {
   return (
     <div>
-      <pre data-src="prism.js">
-        <code class="language-css">{code}</code>
-      </pre>
+      <h1>Primeros pasos</h1>
     </div>
   );
 });

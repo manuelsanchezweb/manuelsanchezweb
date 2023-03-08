@@ -14,6 +14,8 @@
   --color-bg: #f9f9f9;
   --color-brand-primary: rgba(24, 182, 246, 1);
   --color-brand-secondary: rgb(172, 126, 244);
+  --color-text: #292929;
+  --color-code: rgba(0, 0, 0, 6%);
 
   --max-width: 1200px;
 }
@@ -32,6 +34,7 @@ html {
 body {
   font-family: "Nunito", "Helvetica", sans-serif;
   background-color: var(--color-bg);
+  color: var(--color-text);
   height: 100%;
   height: 100%;
   max-width: var(--max-width);
@@ -67,4 +70,36 @@ h3 {
 
 p {
   @apply mb-6 md:text-lg;
+}
+
+pre {
+  @apply my-4;
+}
+
+pre code {
+  padding: 1em;
+  display: block;
+  border: 1px solid black;
+}
+
+code {
+  font-family: Consolas, Menlo, Monaco, source-code-pro, monospace;
+  hyphens: none;
+  line-height: 1.5;
+  overflow: auto;
+  tab-size: 2;
+  text-align: left;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  font-size: 1rem;
+}
+
+:not(pre) > code {
+  background: var(--color-code);
+  border-radius: 2px;
+  color: var(--color-text);
+  padding: 2px 4px;
+  white-space: normal;
 }

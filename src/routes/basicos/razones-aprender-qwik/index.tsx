@@ -1,7 +1,15 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useBrowserVisibleTask$ } from "@builder.io/qwik";
+import hljs from "highlight.js";
+import typescript from "highlight.js/lib/languages/typescript";
+import "highlight.js/styles/mono-blue.css";
 import Pagination from "~/components/pagination";
 
 export default component$(() => {
+  useBrowserVisibleTask$(() => {
+    hljs.registerLanguage("typescript", typescript);
+    hljs.highlightAll();
+  });
+
   return (
     <div>
       <h1>Razones para aprender Qwik</h1>
@@ -41,10 +49,32 @@ export default component$(() => {
         </code>
       </pre>
 
+      <h2>SSR</h2>
+      <p>
+        Esto es quizá lo más espectacular. Si bien es cierto, que otros
+        frameworks pueden lograr el SSR, lo característicos de Qwik es que ese
+        es su <strong>default</strong>, es decir, que todo se carga desde el
+        servidor a no ser que se diga lo contrario. Por lo cual, si todo ya
+        viene desde el servidor, ganamos en velocidad y rendimiento, y en
+        ahorrarle trabajo al cliente.
+      </p>
+      <h2>Lazy Loading por defecto</h2>
+      <p>
+        Qwik se basa en microscripts de JavaScript que se cargan on demand, es
+        decir, solamente si realmente se necesitan. Imagínate: tenemos una
+        página web en la que tenemos el botón típico para hacer el toggle del
+        theme, también tenemos el botón que abre el menú desplegable, un par de
+        botones para cargar más artículos, etc. Con Qwik podemos hacer que todos
+        esas lógicas de JavaScript se carguen tan solo al hacer click al botón
+        de manera que nos ahorramos toda esa lógica si el usuario no interactua
+        con esos elementos.
+      </p>
+
       <Pagination
-        buttonPrevUrl="/"
-        buttonPrevLabel="Inicio"
-        buttonNextUrl="/basicos/requisitos/"
+        buttonPrevUrl="/basicos/"
+        buttonPrevLabel="Volver a la overview de los básicos"
+        buttonNextUrl="/basicos/requisitos"
+        buttonNextLabel="Requisitos del sistema"
       />
     </div>
   );

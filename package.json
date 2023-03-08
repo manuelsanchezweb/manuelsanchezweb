@@ -1,7 +1,7 @@
 {
   "name": "qwik-course-platform",
   "description": "Plataforma de cursos hechos con Qwik",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "engines": {
     "node": ">=15.0.0"
   },
@@ -43,6 +43,6 @@
   },
   "dependencies": {
     "highlight.js": "^11.7.0",
-    "mswebco": "^1.0.5"
+    "mswebco": "^1.0.7"
   }
 }

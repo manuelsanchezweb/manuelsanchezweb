@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import Pagination from "~/components/pagination";
 
 export default component$(() => {
   return (
@@ -60,6 +61,10 @@ export default component$(() => {
           </div>
         </div>
       </div>
+      <Pagination
+        buttonNextLabel="Conceptos básicos: una overview"
+        buttonNextUrl="/basicos/"
+      />
     </>
   );
 });

@@ -47,11 +47,12 @@ export default component$(() => {
             </Link>
             <small class="hidden sm:flex">
               <a
-                class="flex items-center gap-2"
+                style={{ lineHeight: 1 }}
+                class="flex items-end gap-2"
                 href="https://github.com/orgs/manuelsanchezweb/repositories"
               >
                 <IconSwitcher icon="github" />
-                manuelsanchezweb
+                <span> manuelsanchezweb</span>
               </a>
             </small>
           </div>
