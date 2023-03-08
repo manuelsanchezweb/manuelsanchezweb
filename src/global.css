@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #f9f9f9;
+  --color-brand-primary: rgba(24, 182, 246, 1);
+  --color-brand-secondary: rgb(172, 126, 244);
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Nunito", "Helvetica", sans-serif;
+  background-color: var(--color-bg);
+  height: 100%;
+}
+
+a:not([class]),
+a[class=""] {
+  color: var(--color-brand-primary);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-brand-secondary);
+}
+
+h1 {
+  @apply text-4xl font-bold text-gray-900 py-6 sm:py-2 mb-4;
+}
+
+h2 {
+  @apply text-2xl font-bold text-gray-900 py-6 sm:py-2 underline;
+}
+
+h3 {
+  @apply text-xl font-bold text-gray-900 py-6 sm:py-2;
+}
+
+p {
+  @apply mb-6;
+}
