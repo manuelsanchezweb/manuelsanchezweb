@@ -11,7 +11,7 @@ export const ButtonPrev = component$(
     return (
       <Link
         href={buttonPrevUrl}
-        class="inline-flex items-center px-4 py-2 mr-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100"
+        class="inline-flex items-center px-4 py-2 mr-3 text-sm font-medium text-gray-500 hover:text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100"
       >
         <svg
           aria-hidden="true"

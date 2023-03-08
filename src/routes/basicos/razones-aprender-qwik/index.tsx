@@ -1,4 +1,5 @@
 import { component$, useBrowserVisibleTask$ } from "@builder.io/qwik";
+import { DocumentHead, Link } from "@builder.io/qwik-city";
 import hljs from "highlight.js";
 import typescript from "highlight.js/lib/languages/typescript";
 import "highlight.js/styles/mono-blue.css";
@@ -35,16 +36,39 @@ export default component$(() => {
       <h2>Framework basado en componentes</h2>
       <p>
         Esto no es una novedad, muchísimos de los frameworks de JavaScript en la
-        actualidad funcionan de la misma forma. Tenemos un componente al que le
-        pasamos unos <i>params</i> y ya empieza la magia: ya tenemos componentes
-        modulares.
+        actualidad funcionan de la misma forma. Tenemos un componente, le
+        pasamos unas props y ya empieza la magia: ya tenemos componentes
+        modulares. Si no tienes mucha experiencia con props, no te preocupes, lo
+        vemos más adelante en el curso en el apartado de{" "}
+        <Link href="/basicos/componentes-qwik/">Componentes</Link>.
       </p>
 
       <pre style="tab-size: 2;">
         <code lang="tsx">
           {`
-    import { component$ } from "@builder.io/qwik";
-    import { RouterOutlet } from "@builder.io/qwik-city";
+   // Componente sin props
+   import { component$ } from '@builder.io/qwik';
+
+   export default component$(() => {
+     return (
+       <button>Soy un botón inútil</button>
+     );
+   });
+          `}
+        </code>
+      </pre>
+
+      <pre style="tab-size: 2;">
+        <code lang="tsx">
+          {`
+   // Componente con props
+   import { component$ } from '@builder.io/qwik';
+
+   export default component$(({ text = "Texto por defecto" }: { text: string }) => {
+     return (
+       <button>{text}</button>
+     );
+   });
           `}
         </code>
       </pre>
@@ -60,12 +84,16 @@ export default component$(() => {
       </p>
       <h2>Lazy Loading por defecto</h2>
       <p>
-        Qwik se basa en microscripts de JavaScript que se cargan on demand, es
-        decir, solamente si realmente se necesitan. Imagínate: tenemos una
-        página web en la que tenemos el botón típico para hacer el toggle del
-        theme, también tenemos el botón que abre el menú desplegable, un par de
-        botones para cargar más artículos, etc. Con Qwik podemos hacer que todos
-        esas lógicas de JavaScript se carguen tan solo al hacer click al botón
+        Qwik se basa en microscripts de JavaScript que se cargan{" "}
+        <i>on demand</i> , es decir, solamente si realmente se necesitan.
+        Imagínate: tenemos una página web en la que tenemos el botón típico para
+        hacer el toggle del theme, también tenemos el botón que abre el menú
+        desplegable, un par de botones para cargar más artículos, etc.{" "}
+        <strong>
+          {" "}
+          Con Qwik podemos hacer que todos esas lógicas de JavaScript se carguen
+          tan solo al hacer click al botón
+        </strong>{" "}
         de manera que nos ahorramos toda esa lógica si el usuario no interactua
         con esos elementos.
       </p>
@@ -79,3 +107,7 @@ export default component$(() => {
     </div>
   );
 });
+
+export const head: DocumentHead = {
+  title: "Razones para aprender Qwik",
+};

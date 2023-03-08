@@ -48,12 +48,13 @@ body {
 
 a:not([class]),
 a[class=""] {
-  color: var(--color-brand-primary);
+  color: var(--color-text);
+  text-decoration: underline;
 }
 
 a:hover,
 a:focus {
-  color: var(--color-brand-secondary);
+  color: var(--color-brand-primary);
 }
 
 h1 {
@@ -70,6 +71,10 @@ h3 {
 
 p {
   @apply mb-6 md:text-lg;
+}
+
+.custom-link {
+  @apply gap-2 inline-flex items-center px-4 py-2 mt-2 mb-4 mr-3 text-sm font-medium text-gray-500 hover:text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100;
 }
 
 pre {

@@ -43,7 +43,7 @@ export const basics = [
   },
   {
     id: 8,
-    url: "/basicos/qwik-jsx/",
+    url: "/basicos/jsx/",
     label: "JSX y Qwik",
     thumbnail: "https://placehold.co/600x400/orange/white",
   },
@@ -85,8 +85,8 @@ export const basics = [
   },
   {
     id: 14,
-    url: "/basicos/use-resource/",
-    label: "useResource$",
+    url: "/basicos/introduccion-fetch-qwik/",
+    label: "Introducción a Fetch con Qwik",
     thumbnail: "https://placehold.co/600x400/orange/white",
   },
   {
