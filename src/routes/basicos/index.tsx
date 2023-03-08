@@ -55,4 +55,29 @@ export default component$(() => {
 
 export const head: DocumentHead = {
   title: "Básicos del curso de Qwik",
+  meta: [
+    {
+      name: "description",
+      content:
+        "En esta página encontrarás todas las temáticas que considero base para poder trabajar con Qwik.",
+    },
+    {
+      name: "keywords",
+      content: "qwik, curso, principiantes, español, udemy",
+    },
+    {
+      name: "author",
+      content: "Manuel Sanchez",
+    },
+    {
+      name: "og:image",
+      content:
+        "https://manuelsanchezweb-tau.vercel.app/img/qwik-principiantes.png",
+    },
+    {
+      name: "twitter:image",
+      content:
+        "https://manuelsanchezweb-tau.vercel.app/img/qwik-principiantes.png",
+    },
+  ],
 };

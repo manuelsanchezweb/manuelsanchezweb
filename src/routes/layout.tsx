@@ -12,7 +12,7 @@ export default component$(() => {
   const initHandleLinks = $(() => {
     const windowWidth = window.innerWidth;
     if (windowWidth > 640) return;
-    const links = document.querySelectorAll("a");
+    const links = document.querySelectorAll("aside a");
     links.forEach((link) => {
       link.addEventListener("click", () => {
         const navButton = document.querySelector(
