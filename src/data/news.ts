@@ -44,4 +44,10 @@ export const news = [
     ],
     version: "v.0.5.0",
   },
+  {
+    id: 6,
+    date: "08.03.2023",
+    actions: ["Despliegue con Vercel"],
+    version: "v.0.6.0",
+  },
 ];

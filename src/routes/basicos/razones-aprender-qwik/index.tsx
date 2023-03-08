@@ -1,5 +1,6 @@
 import { component$, useVisibleTask$ } from "@builder.io/qwik";
-import { DocumentHead, Link } from "@builder.io/qwik-city";
+import type { DocumentHead } from "@builder.io/qwik-city";
+import { Link } from "@builder.io/qwik-city";
 import hljs from "highlight.js";
 import typescript from "highlight.js/lib/languages/typescript";
 import "highlight.js/styles/mono-blue.css";

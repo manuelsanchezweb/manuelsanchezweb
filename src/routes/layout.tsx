@@ -10,7 +10,7 @@ import Navigation from "~/components/navigation";
 
 export default component$(() => {
   const initHandleLinks = $(() => {
-    let windowWidth = window.innerWidth;
+    const windowWidth = window.innerWidth;
     if (windowWidth > 640) return;
     const links = document.querySelectorAll("a");
     links.forEach((link) => {
