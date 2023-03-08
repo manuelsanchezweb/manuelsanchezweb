@@ -42,6 +42,7 @@
     "vite-tsconfig-paths": "3.5.0"
   },
   "dependencies": {
+    "highlight.js": "^11.7.0",
     "mswebco": "^1.0.5"
   }
 }

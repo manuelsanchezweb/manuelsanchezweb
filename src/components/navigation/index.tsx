@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
+import IconSwitcher from "../icon-switcher";
 import { QwikLogo3 } from "../icons/qwik";
 
 export default component$(() => {
@@ -45,7 +46,13 @@ export default component$(() => {
               <small class="text-gray-500">{version}</small>
             </Link>
             <small class="hidden sm:flex">
-              <a href="https://www.manuelsanchezweb.com">manuelsanchezweb</a>
+              <a
+                class="flex items-center gap-2"
+                href="https://github.com/orgs/manuelsanchezweb/repositories"
+              >
+                <IconSwitcher icon="github" />
+                manuelsanchezweb
+              </a>
             </small>
           </div>
         </div>

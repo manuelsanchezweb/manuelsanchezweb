@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import Pagination from "~/components/pagination";
 
 export default component$(() => {
   return (
@@ -31,46 +32,20 @@ export default component$(() => {
         modulares.
       </p>
 
-      <pre>
-        <code class="language-tsx">
-          <span class="token comment">
-            // File: src/routes/some/path/index.tsx
-          </span>
-          <span class="token keyword">import</span>{" "}
-          <span class="token punctuation"></span> component${" "}
-          <span class="token punctuation"></span>{" "}
-          <span class="token keyword">from</span>{" "}
-          <span class="token string">'@builder.io/qwik'</span>
-          <span class="token punctuation">;</span>
-          <span class="token comment">// Notice the default export</span>
-          <span class="token keyword">export</span>{" "}
-          <span class="token keyword">default</span>{" "}
-          <span class="token function">component$</span>
-          <span class="token punctuation">(</span>
-          <span class="token punctuation">(</span>
-          <span class="token punctuation">)</span>{" "}
-          <span class="token operator">=&gt;</span>{" "}
-          <span class="token punctuation"></span>
-          <span class="token keyword">return</span>{" "}
-          <span class="token tag">
-            <span class="token tag">
-              <span class="token punctuation">&lt;</span>h1
-            </span>
-            <span class="token punctuation">&gt;</span>
-          </span>
-          <span class="token plain-text">Hello World!</span>
-          <span class="token tag">
-            <span class="token tag">
-              <span class="token punctuation">&lt;/</span>h1
-            </span>
-            <span class="token punctuation">&gt;</span>
-          </span>
-          <span class="token punctuation">;</span>
-          <span class="token punctuation"></span>
-          <span class="token punctuation">)</span>
-          <span class="token punctuation">;</span>
+      <pre style="tab-size: 2;">
+        <code lang="tsx">
+          {`
+    import { component$ } from "@builder.io/qwik";
+    import { RouterOutlet } from "@builder.io/qwik-city";
+          `}
         </code>
       </pre>
+
+      <Pagination
+        buttonPrevUrl="/"
+        buttonPrevLabel="Inicio"
+        buttonNextUrl="/basicos/requisitos/"
+      />
     </div>
   );
 });

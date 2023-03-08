@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import {
+  IconGithub,
   IconInfo,
   IconJetpack,
   IconLearn,
@@ -20,6 +21,8 @@ export default component$(({ icon }: { icon: string }) => {
         return <IconLearn />;
       case "versions":
         return <IconVersions />;
+      case "github":
+        return <IconGithub />;
       default:
         return <IconInfo />;
     }
