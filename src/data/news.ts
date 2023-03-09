@@ -53,7 +53,13 @@ export const news = [
   {
     id: 7,
     date: "09.03.2023",
-    actions: ["Refactorizar código"],
+    actions: ["Refactorizar código general"],
     version: "v.0.6.5",
+  },
+  {
+    id: 8,
+    date: "09.03.2023",
+    actions: ["Refactorizar código general"],
+    version: "v.0.7.0",
   },
 ];
