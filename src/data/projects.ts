@@ -1,20 +1,20 @@
 export const projects = [
   {
     id: 1,
-    url: "/proyectos/the-simpsons-quote-app/",
+    url: "/cursos/qwik/proyectos/the-simpsons-quote-app/",
     label: "The Simpsons Quote App",
-    thumbnail: "../img/project-simpsons.png",
+    thumbnail: "../../../img/project-simpsons.png",
   },
   {
     id: 2,
-    url: "/proyectos/weather-app/",
+    url: "/cursos/qwik/proyectos/weather-app/",
     label: "Weather App",
-    thumbnail: "../img/project-weather-app.png",
+    thumbnail: "../../../img/project-weather-app.png",
   },
   {
     id: 3,
-    url: "/proyectos/blog-app/",
+    url: "/cursos/qwik/proyectos/blog-app/",
     label: "Blog App",
-    thumbnail: "../img/project-blog.png",
+    thumbnail: "../../../img/project-blog.png",
   },
 ];

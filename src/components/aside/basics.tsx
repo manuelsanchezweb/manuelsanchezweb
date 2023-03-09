@@ -10,7 +10,7 @@ export const Basics = component$(() => {
   return (
     <li>
       <AsideListItemDropdown
-        url="/basicos/"
+        url="/cursos/qwik/basicos/"
         icon="learn"
         locationUrl={location.url.pathname}
         label="Básicos"

@@ -10,7 +10,7 @@ export const Projects = component$(() => {
   return (
     <li>
       <AsideListItemDropdown
-        url="/proyectos/"
+        url="/cursos/qwik/proyectos/"
         icon="jetpack"
         locationUrl={location.url.pathname}
         label="Proyectos"

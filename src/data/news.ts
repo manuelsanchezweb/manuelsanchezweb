@@ -50,4 +50,10 @@ export const news = [
     actions: ["Despliegue con Vercel"],
     version: "v.0.6.0",
   },
+  {
+    id: 7,
+    date: "09.03.2023",
+    actions: ["Refactorizar código"],
+    version: "v.0.6.5",
+  },
 ];

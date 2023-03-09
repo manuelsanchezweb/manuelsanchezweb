@@ -13,16 +13,24 @@ export default component$(() => {
       <div class="h-full px-3 pb-4 overflow-y-auto bg-white">
         <ul class="space-y-2">
           {/* About this course */}
-          <AsideListItem url="/" label="Sobre el curso" icon="info" />
+          <AsideListItem
+            url="/cursos/qwik/"
+            label="Sobre el curso"
+            icon="info"
+          />
           <Basics />
           <Projects />
           <hr />
           <AsideListItem
-            url="/materiales-complementarios/"
+            url="/cursos/qwik/materiales-complementarios/"
             label="Mat. Complementario"
             icon="tools"
           />
-          <AsideListItem url="/novedades/" label="Novedades" icon="versions" />
+          <AsideListItem
+            url="/cursos/qwik/novedades/"
+            label="Novedades"
+            icon="versions"
+          />
         </ul>
       </div>
     </aside>
