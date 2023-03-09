@@ -29,9 +29,17 @@ export default component$(() => {
 
       <p>
         <strong>DISCLAIMER:</strong> si quieres una razón más técnica de la que
-        te voy a dar, te invito a que le eches un vistazo a la documentación
-        oficial, y que la guardes en favoritos, porque echaremos unos buenos
-        momentos ahí.
+        te voy a dar, te invito a que le eches un vistazo{" "}
+        <a
+          target="_blank"
+          rel="nofollow noopener"
+          title="Documentación oficial de Qwik"
+          href="https://qwik.builder.io/docs/overview/"
+        >
+          a la documentación oficial
+        </a>{" "}
+        , y que la guardes en favoritos, porque echaremos unos buenos momentos
+        ahí.
       </p>
 
       <h2>Framework basado en componentes</h2>

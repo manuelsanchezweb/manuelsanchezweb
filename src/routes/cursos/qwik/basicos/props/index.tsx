@@ -3,6 +3,7 @@ import { DocumentHead } from "@builder.io/qwik-city";
 import hljs from "highlight.js";
 import typescript from "highlight.js/lib/languages/typescript";
 import "highlight.js/styles/mono-blue.css";
+import CustomLink from "~/components/custom-link";
 import Pagination from "~/components/pagination";
 
 export default component$(() => {
@@ -14,12 +15,45 @@ export default component$(() => {
   return (
     <div>
       <h1>Props</h1>
+      <CustomLink
+        url="https://github.com/manuelsanchezweb/qwik-curso-principiantes/tree/lection/props"
+        text="Enlace al repositorio"
+        icon="github"
+      />
+
       <p>
-        Lo primero que vamos a hacer es eliminar las rutas y los archivos de
-        Qwik que venían con la plantilla. Vamos a dejar casi vacío el{" "}
-        <code>index.tsx</code> que está dentro de <code>routes</code> y el
-        layout.tsx que tiene al lado.{" "}
+        Denominamos props a aquellos parámetros que le podemos pasar a los
+        componentes. En la lección anterior hemos visto como hacer un
+        componente, importarlo y llamarlo escribiendo tan solo{" "}
+        <code>&lt;Headline /&gt;</code>. Aunque esto nos sirva para algunos
+        componentes (podríamos guardar los <code>svg</code> de esta forma),{" "}
+        <strong>
+          en la mayoría de las ocasiones querremos pasar algún que otro
+          argumento.
+        </strong>
       </p>
+      <p>
+        Por ejemplo, podríamos hacer un <code>Headline</code> algo más dinámico
+        de la siguiente forma:
+      </p>
+
+      <pre style="tab-size: 2;">
+        <code lang="tsx">
+          {`
+    // Path: src/components/headline/index.tsx
+    import { component$ } from "@builder.io/qwik";
+
+    export default component$(({ text }: { text: string }) => {
+      return <h1>{text}</h1>;
+    });
+          `}
+        </code>
+      </pre>
+      <p>
+        Lo importamos donde queramos utilizarlo pasándole ahora el texto que
+        queramos pasarle.
+      </p>
+
       <pre style="tab-size: 2;">
         <code lang="tsx">
           {`
@@ -30,50 +64,60 @@ export default component$(() => {
    export default component$(() => {
      return (
        <div>
-         <h1>Components</h1>
+         <Headline text="Este headline me representa" />
        </div>
      );
    });
-   
-   export const head: DocumentHead = {
-     title: "Welcome to Qwik",
-     meta: [
-       {
-         name: "description",
-         content: "Qwik site description",
-       },
-     ],
-   };
+  
           `}
         </code>
       </pre>
       <p>
-        Esta última parte, la del <code>DocumentHead</code>, también la podemos
-        eliminar, ya que ahora mismo el foco no está en aprender a hacer SEO con
-        Qwik, pero para que lo sepas, es aquí donde puedes encargarte de las
-        metatags.
+        Si no estás familiarizado con TypeScript, te recomiendo que le eches un
+        vistazo a cómo funciona el tema de los <code>types</code> y/o las{" "}
+        <code>interfaces</code> ya que el ejemplo de arriba es muy sencillo,
+        pero te alegrará ganar en legibilidad usando esas herramientas de
+        TypeScript. Por ahora, simplemente quiero explicarte que{" "}
+        <strong>
+          podemos hacer algo más flexible nuestro componente añadiendo textos
+          por defecto (el parámetro que pasemos automáticamente sobreescribe el
+          default) y hacer los parámetros opcionales.
+        </strong>
       </p>
       <pre style="tab-size: 2;">
         <code lang="tsx">
           {`
-   // Path: src/routes/layout.tsx
-   import { component$, Slot } from "@builder.io/qwik";
+    // Path: src/components/headline/index.tsx
+    import { component$ } from "@builder.io/qwik";
 
-   export default component$(() => {
-     return <Slot />;
-   });
+    export default component$(({ text = "Texto por defecto" }: { text?: string }) => {
+      return <h1>{text}</h1>;
+    });
+          `}
+        </code>
+      </pre>
+      <pre style="tab-size: 2;">
+        <code lang="tsx">
+          {`
+   // Path: src/routes/index.tsx
+   import { component$ } from "@builder.io/qwik";
+   import type { DocumentHead } from "@builder.io/qwik-city";
    
+   export default component$(() => {
+     return (
+       <div>
+         <Headline /> // Este mostrará el texto por defecto
+         <Headline text="Este headline me representa" /> // Sobreescribe el default text
+       </div>
+     );
+   });
+  
           `}
         </code>
       </pre>
       <p>
-        A continuación, dentro de la carpeta <code>components</code> en{" "}
-        <code>src</code> vamos a crear una nueva carpeta llamada{" "}
-        <code>header</code>. Crea dentro de esa carpeta un archivo llamado{" "}
-        <code>index.tsx</code>. Ahí dentro podemos crear nuestro primer
-        componente. Si estás usando VSCode y tienes la extensión que recomendé
-        al principio, entonces haciendo <code>q-</code> debería salirte la
-        sugerencia del snippet de código.
+        En la siguiente lección vamos a cubrir uno de los temas fundamentales
+        que destacan a Qwik frente a otros frameworks: <strong>el SSR</strong>.
       </p>
 
       <Pagination

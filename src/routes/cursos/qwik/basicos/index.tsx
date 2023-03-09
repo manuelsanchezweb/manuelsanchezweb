@@ -38,7 +38,7 @@ export default component$(() => {
           <li key={element.id}>
             <Link
               href={element.url}
-              class="flex items-center p-4 text-white transition duration-75 rounded-lg group bg-[var(--color-brand-primary)] hover:text-white hover:bg-[var(--color-brand-secondary)]"
+              class="flex items-center p-4 text-white transition duration-75 rounded-lg group bg-[var(--color-brand-primary)] hover:text-white hover:bg-[var(--color-brand-secondary)] font-nunito"
             >
               <span>{element.label}</span>
             </Link>

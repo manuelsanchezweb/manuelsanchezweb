@@ -37,6 +37,16 @@ export default component$(() => {
         En el vídeo de la lección te cuento largo y tendido cómo funciona la
         estructura de un proyecto con Qwik, sobre todo, lo importante es
         quedarse con la idea de <code>Slot</code>, <code>index y layout</code>.
+        También hablaremos de{" "}
+        <a
+          target="_blank"
+          rel="nofollow noopener"
+          title="Qwik City en la documentación oficial de Qwik"
+          href="https://qwik.builder.io/qwikcity/overview/"
+        >
+          Qwik City
+        </a>{" "}
+        .
       </p>
       <p>
         Una vez cubierto el tema, estamos listos para descubrir el mundo de los

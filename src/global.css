@@ -32,7 +32,7 @@ html {
 }
 
 body {
-  font-family: "Nunito", "Helvetica", sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
   height: 100%;
@@ -69,6 +69,15 @@ h3 {
   @apply text-xl font-bold text-gray-900 py-6 sm:py-2;
 }
 
+.font-nunito {
+  font-family: "Nunito", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Nunito", sans-serif;
+}
 p {
   @apply mb-6 md:text-lg;
 }
