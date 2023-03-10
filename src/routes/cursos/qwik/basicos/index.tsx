@@ -18,7 +18,7 @@ export default component$(() => {
           title="Curso Qwik Principiantes Español"
           href="https://www.google.de"
         >
-          curso gratuito de Qwik de Udemy.
+          curso gratuito de Qwik de Udemy
         </a>
         .
       </p>

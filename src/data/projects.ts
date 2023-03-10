@@ -13,6 +13,12 @@ export const projects = [
   },
   {
     id: 3,
+    url: "/cursos/qwik/proyectos/todo-app/",
+    label: "To Do App",
+    thumbnail: "../../../img/project-todoapp.png",
+  },
+  {
+    id: 4,
     url: "/cursos/qwik/proyectos/blog-app/",
     label: "Blog App",
     thumbnail: "../../../img/project-blog.png",

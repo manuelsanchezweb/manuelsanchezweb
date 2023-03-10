@@ -6,6 +6,15 @@ export default component$(() => {
   return (
     <>
       <h1>Bienvenido a tu plataforma de cursos de Qwik JS</h1>
+      <p>
+        Aquí encontrarás varios cursos que te servirán para familiarizarte con
+        este framework de JavaScript. Aprenderemos cómo utilizar las
+        herramientas y características de Qwik para hacer nuestras aplicaciones
+        más rápidas y eficientes. Aunque para acceder tanto al curso de
+        principiantes como intermedio-avanzado, no es necesario tener
+        experiencia previa en Qwik, se recomienda tener conocimientos previos en
+        otros frameworks de JavaScript.
+      </p>
       <div class="flex flex-col-reverse gap-4 mb-4 lg:my-4 lg:flex-row">
         <a href="https://www.google.es" target="_blank" rel="nofollow noopener">
           <figure class="overflow-hidden max-w-fit border-black border-2">
@@ -60,6 +69,37 @@ export default component$(() => {
             .
           </div>
         </div>
+      </div>
+      <h2>Creador del curso</h2>
+      <div class="flex flex-col lg:flex-row lg:items-center gap-6">
+        <figure class="min-w-[250px] mb-0">
+          <img
+            width="250"
+            height="250"
+            src="../../img/manuel-keyboard.svg"
+            alt="Bajo Construcciones"
+          />
+        </figure>
+        <p>
+          ¡Buenas! Soy Manuel Sánchez, y voy a ser tu instructor en estos cursos
+          de Qwik. Soy Frontend Developer desde hace varios años, y{" "}
+          <strong>
+            tengo una pasión por escribir código lo más performántico posible
+          </strong>{" "}
+          y <strong>por enseñar</strong>. Soy autor de varios cursos en Udemy
+          con miles de estudiantes, y además trato de publicar contenido de
+          forma regular en mi cuenta de{" "}
+          <a
+            title="Cuenta de YouTube de manuelsanchezweb"
+            rel="nofollow noopener"
+            target="_blank"
+            href="https://www.youtube.com/channel/UCX3IE_OjG20p_AwbX06YAEg"
+          >
+            YouTube
+          </a>
+          . En mi tiempo libre me gusta hacer kickboxing y aprender idiomas.
+          ¡Bienvenido de nuevo a la plataforma!
+        </p>
       </div>
       <Pagination
         buttonNextLabel="Conceptos básicos: una overview"

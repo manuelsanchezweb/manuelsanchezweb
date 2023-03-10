@@ -20,7 +20,7 @@ export const AsideListItem = component$(
       <li>
         <Link
           href={url}
-          class={`flex items-center p-2 text-base font-normal !text-gray-900 rounded-lg hover:font-bold hover:text-gray-900 focus:text-gray-900 focus:font-bold hover:bg-gray-100" ${
+          class={`flex items-center rounded-lg p-2 text-base font-normal hover:bg-gray-100 hover:font-bold hover:text-gray-900 focus:text-gray-900 focus:font-bold" ${
             location.url.pathname == url ? "!font-bold" : ""
           }`}
         >

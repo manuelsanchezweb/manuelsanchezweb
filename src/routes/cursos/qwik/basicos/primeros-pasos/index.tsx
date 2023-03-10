@@ -45,7 +45,7 @@ export default component$(() => {
           href="https://qwik.builder.io/qwikcity/overview/"
         >
           Qwik City
-        </a>{" "}
+        </a>
         .
       </p>
       <p>

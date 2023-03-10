@@ -23,7 +23,7 @@ export const AsideListItemDropdown = component$(
     return (
       <div class="flex justify-between w-full">
         <Link
-          class={`flex w-full p-2 hover:font-bold hover:text-gray-900 focus:text-gray-900 ${
+          class={`flex w-full p-2 rounded-lg hover:bg-gray-100 hover:font-bold hover:text-gray-900 focus:text-gray-900 focus:font-bold ${
             locationUrl == url ? "!font-bold" : ""
           }`}
           href={url}
@@ -38,7 +38,7 @@ export const AsideListItemDropdown = component$(
         </Link>
         <button
           type="button"
-          class="flex items-center text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100"
+          class="flex items-center text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 px-1"
           aria-controls={dropdownId}
           data-collapse-toggle={dropdownId}
         >

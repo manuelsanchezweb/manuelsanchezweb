@@ -62,11 +62,11 @@ h1 {
 }
 
 h2 {
-  @apply text-2xl font-bold text-gray-900 py-6 sm:py-2 underline;
+  @apply text-2xl font-bold text-gray-900 py-6 sm:py-2 mb-4;
 }
 
 h3 {
-  @apply text-xl font-bold text-gray-900 py-6 sm:py-2;
+  @apply text-xl font-bold text-gray-900 py-6 sm:py-2 mb-4;
 }
 
 .font-nunito {

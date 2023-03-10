@@ -37,7 +37,7 @@ export default component$(() => {
           href="https://qwik.builder.io/docs/overview/"
         >
           a la documentación oficial
-        </a>{" "}
+        </a>
         , y que la guardes en favoritos, porque echaremos unos buenos momentos
         ahí.
       </p>

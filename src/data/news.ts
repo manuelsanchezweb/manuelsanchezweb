@@ -62,4 +62,13 @@ export const news = [
     actions: ["Refactorizar código general"],
     version: "v.0.7.0",
   },
+  {
+    id: 9,
+    date: "10.03.2023",
+    actions: [
+      "Hacer varias mejoras generales de estilo",
+      "Añadir algo más de contenido a los futuros proyectos",
+    ],
+    version: "v.0.7.2",
+  },
 ];

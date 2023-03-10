@@ -41,19 +41,19 @@ export default component$(() => {
         en el curso son los siguientes:
       </p>
 
-      <ul class="flex flex-wrap gap-4">
+      <ul class="flex flex-wrap gap-6 justify-center lg:justify-start">
         {projects.map((element) => (
           <li key={element.id}>
             <Link
               href={element.url}
-              class="flex flex-col gap-4 items-center transition duration-75 rounded-lg group hover:text-black"
+              class="flex flex-col gap-1 items-center transition duration-75 rounded-lg group hover:text-black"
             >
               <figure class="overflow-hidden max-w-fit border-black border-2">
                 <img
-                  class="w-[400px] max-h-[300px] h-[300px] object-cover hover:scale-105 transition-transform"
+                  class="w-[250px] max-h-[190px] h-[190px] object-cover hover:scale-105 transition-transform"
                   src={element.thumbnail}
-                  width="400"
-                  height="300"
+                  width="250"
+                  height="190"
                   alt={element.label}
                 />
               </figure>

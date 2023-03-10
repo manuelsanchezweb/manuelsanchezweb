@@ -22,7 +22,7 @@ export const Projects = component$(() => {
           <li key={element.id}>
             <Link
               href={element.url}
-              class={`flex items-center w-full p-1 text-base font-normal transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 ${
+              class={`flex items-center w-full p-1 text-base font-normal !text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 hover:font-bold hover:text-gray-900 focus:text-gray-900 focus:font-bold ${
                 location.url.pathname == element.url ? "!font-semibold" : ""
               }`}
             >

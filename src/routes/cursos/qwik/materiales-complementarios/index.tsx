@@ -17,8 +17,8 @@ export default component$(() => {
             rel="nofollow noopener"
             target="_blank"
           >
-            Docu de Qwik:{" "}
-          </a>
+            Docu de Qwik:
+          </a>{" "}
           La documentación oficial donde verás todas las actualizaciones.
         </li>
         <li>
@@ -28,8 +28,8 @@ export default component$(() => {
             rel="nofollow noopener"
             target="_blank"
           >
-            mswebco:{" "}
-          </a>
+            mswebco:
+          </a>{" "}
           Es un paquete asistente de commits. Lo hice siguiendo uno de los
           tutoriales de Twitch de midudev, y la verdad que me encanta.
         </li>
