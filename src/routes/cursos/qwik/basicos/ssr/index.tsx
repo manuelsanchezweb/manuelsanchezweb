@@ -4,6 +4,7 @@ import typescript from "highlight.js/lib/languages/typescript";
 import "highlight.js/styles/mono-blue.css";
 import CustomLink from "~/components/custom-link";
 import Pagination from "~/components/pagination";
+import Video from "~/components/video";
 
 export default component$(() => {
   useVisibleTask$(() => {
@@ -56,11 +57,22 @@ export default component$(() => {
         más. Ves que hay dos console.log, uno antes del <code>return</code> y
         otro en el evento del <code>button</code>. Observa dónde recibiremos
         cada uno de los logs.
-        <img src="" alt="" />
-        Antes quiero que veas que el componente viene disponible ya desde el
-        servidor (por ello ese primer console.log sucede ahí y lo recibimos en
-        la terminal)
       </p>
+      <Video src="../../../../videos/ssr-qwik.mov" />
+
+      <p>
+        El componente viene disponible ya desde el servidor (por ello ese primer
+        console.log sucede ahí y lo recibimos en la terminal). Esta es una de
+        las magias de Qwik, y el encargado de hacer esto es el <code>$</code>{" "}
+        que verás por todos lados en una aplicación de Qwik, como por ejemplo en{" "}
+        <code>component$</code>.
+      </p>
+      <p>
+        Si te has fijado, en el último vídeo vemos cómo al hacer un click en el
+        botón se añade un nuevo script a la página. Hablemos más de ello en la
+        siguiente lección.
+      </p>
+
       <Pagination
         buttonPrevUrl="/cursos/qwik/basicos/props/"
         buttonPrevLabel="Volver a ver Props"

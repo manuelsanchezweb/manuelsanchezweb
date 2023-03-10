@@ -41,7 +41,10 @@ export default component$(() => {
         serie de variables y métodos se encuentren disponibles en toda la
         aplicación. Y de esta forma hasta el más pequeño de los componentes
         puede acceder al los datos del contexto (store), que llamaremos{" "}
-        <code>authStore</code> en el siguiente código.
+        <code>authStore</code> en el siguiente código. Es una buena forma de
+        evitar el <strong>prop drilling</strong>, que es básicamente cuando nos
+        dedicamos a pasar todo el rato datos desde componentes que están más
+        arriba hasta los hijos más pequeños.
       </p>
       <p>Echémosle un vistazo al siguiente código:</p>
       <pre style="tab-size: 2;">
@@ -158,10 +161,7 @@ export default component$(() => {
         </code>
       </pre>
       <p>Esto sería el el resultado en pantalla:</p>
-      <Video
-        className="border-2 border-black mb-6"
-        src="../../../../videos/usecontext.mov"
-      />
+      <Video src="../../../../videos/usecontext.mov" />
 
       <p>
         Como hemos dicho anteriormente, también podríamos acceder al contexto
@@ -220,10 +220,7 @@ export default component$(() => {
           `}
         </code>
       </pre>
-      <Video
-        className="border-2 border-black mb-6"
-        src="../../../../videos/usecontext-component.mov"
-      />
+      <Video src="../../../../videos/usecontext-component.mov" />
       <p>
         ¡Espero que te haya parecido interesante! ¡Te veo en la próxima lección!
       </p>

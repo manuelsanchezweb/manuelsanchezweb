@@ -80,4 +80,14 @@ export const news = [
     ],
     version: "v.0.7.3",
   },
+  {
+    id: 11,
+    date: "10.03.2023",
+    actions: [
+      "Añadir contenido completo sobre SSR",
+      "Añadir contenido completo sobre Lazy Loading",
+      "Añadir contenido sobre JSX",
+    ],
+    version: "v.0.7.5",
+  },
 ];
