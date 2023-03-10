@@ -71,4 +71,13 @@ export const news = [
     ],
     version: "v.0.7.2",
   },
+  {
+    id: 10,
+    date: "10.03.2023",
+    actions: [
+      "Añadir componente Video",
+      "Añadir contenido completo sobre useContext",
+    ],
+    version: "v.0.7.3",
+  },
 ];

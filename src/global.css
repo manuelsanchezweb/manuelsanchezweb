@@ -78,8 +78,13 @@ h2,
 h3 {
   font-family: "Nunito", sans-serif;
 }
+
 p {
   @apply mb-6 md:text-lg;
+}
+
+li.list-disc {
+  @apply md:text-lg;
 }
 
 figure {
