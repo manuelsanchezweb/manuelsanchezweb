@@ -24,7 +24,7 @@ export default component$(() => {
         Es aquí donde entran en juego dos conceptos importantes de entender:{" "}
         <code>hydration</code> y <code>serialization</code> o{" "}
         <code>resumability</code>. Mientras que los frameworks a los que estamos
-        acostumbrados optan por una estrategia de <strong>hydration</strong>,
+        acostumbrados optan por una estrategia de <strong>hydration</strong>,{" "}
         <strong>Qwik apuesta fuerte por serializar su código</strong>. Veamos
         qué es esto a lo que nos referimos:
       </p>

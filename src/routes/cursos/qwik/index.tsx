@@ -16,7 +16,12 @@ export default component$(() => {
         otros frameworks de JavaScript.
       </p>
       <div class="flex flex-col-reverse gap-4 mb-4 lg:my-4 lg:flex-row">
-        <a href="https://www.google.es" target="_blank" rel="nofollow noopener">
+        <a
+          title="Curso de principiantes de Qwik en Udemy"
+          href="https://www.udemy.com/user/manuel-sanchez-324/"
+          target="_blank"
+          rel="nofollow noopener"
+        >
           <figure class="overflow-hidden max-w-fit border-black border-2">
             <img
               class="min-w-[300px] hover:scale-105 transition-transform"
@@ -44,7 +49,12 @@ export default component$(() => {
       </div>
 
       <div class="flex flex-col-reverse gap-4 mb-4 lg:flex-row">
-        <a href="https://www.google.es" target="_blank" rel="nofollow noopener">
+        <a
+          title="Curso intermedio-avanzado de Qwik en Udemy"
+          href="https://www.udemy.com/user/manuel-sanchez-324/"
+          target="_blank"
+          rel="nofollow noopener"
+        >
           <figure class="overflow-hidden max-w-fit border-black border-2">
             <img
               class="min-w-[300px] hover:scale-105 transition-transform"
@@ -70,7 +80,7 @@ export default component$(() => {
           </div>
         </div>
       </div>
-      <h2>Creador del curso</h2>
+      <h2>Sobre mí</h2>
       <div class="flex flex-col lg:flex-row lg:items-center gap-6">
         <figure class="min-w-[250px] mb-0">
           <img
@@ -86,7 +96,16 @@ export default component$(() => {
           <strong>
             tengo una pasión por escribir código lo más performántico posible
           </strong>{" "}
-          y <strong>por enseñar</strong>. Soy autor de varios cursos en Udemy
+          y <strong>por enseñar</strong>. Soy autor de{" "}
+          <a
+            title="Cuenta de Udemy"
+            rel="nofollow noopener"
+            target="_blank"
+            href="https://www.udemy.com/user/manuel-sanchez-324/"
+          >
+            {" "}
+            varios cursos en Udemy
+          </a>{" "}
           con miles de estudiantes, y además trato de publicar contenido de
           forma regular en mi cuenta de{" "}
           <a

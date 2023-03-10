@@ -4,7 +4,7 @@ import CustomLink from "~/components/custom-link";
 
 export default component$(() => {
   return (
-    <div class="flex flex-col gap-4 justify-center items-center max-w-[600px] min-h-screen text-center px-4">
+    <div class="flex flex-col justify-center items-center max-w-[600px] min-h-screen text-center px-4">
       <img
         width="350"
         height="350"

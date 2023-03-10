@@ -6,8 +6,8 @@ export default component$(() => {
     <div>
       <h1>Qwik Styling</h1>
       <Pagination
-        buttonPrevUrl="/cursos/qwik/basicos/qwik-add/"
-        buttonPrevLabel="Volver a ver qwik add"
+        buttonPrevUrl="/cursos/qwik/basicos/integraciones/"
+        buttonPrevLabel="Volver a ver Integraciones"
         buttonNextUrl="/cursos/qwik/basicos/use-signal/"
         buttonNextLabel="Ir a useSignal"
       />

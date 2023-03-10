@@ -90,4 +90,16 @@ export const news = [
     ],
     version: "v.0.7.5",
   },
+  {
+    id: 12,
+    date: "10.03.2023",
+    actions: [
+      "Añadir contenido completo sobre final del curso",
+      "Añadir contenido completo sobre fetch",
+      "Añadir contenido completo sobre useOn",
+      "Añadir contenido completo sobre useContext",
+      "Añadir contenido completo sobre integraciones",
+    ],
+    version: "v.0.8.0",
+  },
 ];

@@ -22,8 +22,8 @@ export default component$(() => {
       <Pagination
         buttonPrevUrl="/cursos/qwik/basicos/lazy-loading/"
         buttonPrevLabel="Volver a ver Lazy Loading"
-        buttonNextUrl="/cursos/qwik/basicos/qwik-add/"
-        buttonNextLabel="Ir a qwik add"
+        buttonNextUrl="/cursos/qwik/basicos/integraciones/"
+        buttonNextLabel="Ir a Integraciones"
       />
     </div>
   );

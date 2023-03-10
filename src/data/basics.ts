@@ -41,8 +41,8 @@ export const basics = [
   },
   {
     id: 9,
-    url: "/cursos/qwik/basicos/qwik-add/",
-    label: "Qwik add",
+    url: "/cursos/qwik/basicos/integraciones/",
+    label: "Integraciones",
   },
   {
     id: 10,
