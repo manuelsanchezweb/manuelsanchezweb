@@ -46,7 +46,7 @@ export const basics = [
   },
   {
     id: 10,
-    url: "/cursos/qwik/basicos/qwik-styling/",
+    url: "/cursos/qwik/basicos/styling/",
     label: "Styling",
   },
   {

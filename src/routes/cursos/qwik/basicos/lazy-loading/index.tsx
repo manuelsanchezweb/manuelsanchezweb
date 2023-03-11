@@ -1,11 +1,17 @@
-import { component$, useVisibleTask$ } from "@builder.io/qwik";
+import {
+  component$,
+  useStylesScoped$,
+  useVisibleTask$,
+} from "@builder.io/qwik";
 import hljs from "highlight.js";
 import typescript from "highlight.js/lib/languages/typescript";
-import "highlight.js/styles/mono-blue.css";
+import styles from "highlight.js/styles/mono-blue.css?inline";
 import Pagination from "~/components/pagination";
 import Video from "~/components/video";
 
 export default component$(() => {
+  useStylesScoped$(styles);
+
   useVisibleTask$(() => {
     hljs.registerLanguage("typescript", typescript);
     hljs.highlightAll();
@@ -89,6 +95,60 @@ export default component$(() => {
       </pre>
 
       <Video src="../../../../videos/serializing-qwik.mov" />
+
+      <p>
+        Aquí os dejo otra forma de contemplarlo, según lo explica Miško Hevery,
+        creador de Builder.io/Qwik y Angular, en{" "}
+        <a
+          title="Hilo de Twitter hablando de las ventajas del lazy loading de Qwik"
+          rel="nofollow noopener"
+          target="_blank"
+          href="https://twitter.com/mhevery/status/1630251211130564609"
+        >
+          un hilo de Twitter
+        </a>
+        :
+      </p>
+      <div class="flex gap-4">
+        <figure>
+          <img
+            width="auto"
+            height="300px"
+            class="min-h-[300px]"
+            src="https://pbs.twimg.com/media/Fp_Q1JZaIAEBMvk?format=png&name=4096x4096"
+            alt="Ejecución normal de una página y sus componentes al montarse."
+          />
+          <figcaption>
+            Ejecución normal de una página y sus componentes al montarse.
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            width="auto"
+            height="300px"
+            class="min-h-[300px]"
+            src="https://pbs.twimg.com/media/Fp_Q2B3aMAUHkWj?format=jpg&name=4096x4096"
+            alt="El uso de Signals nos permite ahorrarnos esa ejecución inicial"
+          />
+          <figcaption>
+            El uso de Signals nos permite ahorrarnos esa ejecución inicial.
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            width="auto"
+            height="300px"
+            class="min-h-[300px]"
+            src="https://pbs.twimg.com/media/Fp_Q2zIaMAIfiVb?format=jpg&name=4096x4096"
+            alt="Cuando surge la interacción, se carga únicamente el efecto del
+            componente interactuado."
+          />
+          <figcaption>
+            Cuando surge la interacción, se carga únicamente el efecto del
+            componente interactuado.
+          </figcaption>
+        </figure>
+      </div>
 
       <Pagination
         buttonPrevUrl="/cursos/qwik/basicos/ssr/"

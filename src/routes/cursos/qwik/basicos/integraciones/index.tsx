@@ -30,7 +30,7 @@ export default component$(() => {
       <Pagination
         buttonPrevUrl="/cursos/qwik/basicos/jsx/"
         buttonPrevLabel="Volver a ver JSX"
-        buttonNextUrl="/cursos/qwik/basicos/qwik-styling/"
+        buttonNextUrl="/cursos/qwik/basicos/styling/"
         buttonNextLabel="Ir a Styling"
       />
     </div>

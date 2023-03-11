@@ -102,4 +102,15 @@ export const news = [
     ],
     version: "v.0.8.0",
   },
+  {
+    id: 13,
+    date: "11.03.2023",
+    actions: [
+      "Mejorar Video component",
+      "Añadir contenido completo sobre Styling",
+      "Añadir contenido completo sobre useSignal",
+      "Añadir contenido completo sobre useStore",
+    ],
+    version: "v.0.8.0",
+  },
 ];

@@ -91,6 +91,10 @@ figure {
   @apply mb-6;
 }
 
+figure figcaption {
+  @apply text-sm text-gray-500 mt-4;
+}
+
 .custom-link {
   @apply gap-2 inline-flex items-center px-4 py-2 mt-2 mb-4 text-sm font-medium text-gray-500 hover:text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100;
 }

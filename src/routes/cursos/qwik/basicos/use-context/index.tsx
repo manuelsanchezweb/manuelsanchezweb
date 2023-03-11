@@ -1,12 +1,18 @@
-import { component$, useVisibleTask$ } from "@builder.io/qwik";
+import {
+  component$,
+  useStylesScoped$,
+  useVisibleTask$,
+} from "@builder.io/qwik";
 import hljs from "highlight.js";
 import typescript from "highlight.js/lib/languages/typescript";
-import "highlight.js/styles/mono-blue.css";
+import styles from "highlight.js/styles/mono-blue.css?inline";
 import CustomLink from "~/components/custom-link";
 import Pagination from "~/components/pagination";
 import Video from "~/components/video";
 
 export default component$(() => {
+  useStylesScoped$(styles);
+
   useVisibleTask$(() => {
     hljs.registerLanguage("typescript", typescript);
     hljs.highlightAll();
@@ -51,7 +57,15 @@ export default component$(() => {
         <code lang="tsx">
           {`
     // Path: src/root.tsx
-    import { $, component$, createContextId, Signal, useContextProvider, useSignal, useStore } from "@builder.io/qwik";
+    import {
+      $,
+      component$,
+      createContextId,
+      Signal,
+      useContextProvider,
+      useSignal,
+      useStore }
+      from "@builder.io/qwik";
     import { QwikCityProvider, RouterOutlet, ServiceWorkerRegister } from "@builder.io/qwik-city";
     import { RouterHead } from "./components/router-head/router-head";
 
