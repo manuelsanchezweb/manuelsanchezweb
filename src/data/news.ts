@@ -119,4 +119,10 @@ export const news = [
     actions: ["Añadir proto newsletter (no validación)"],
     version: "v.0.8.6",
   },
+  {
+    id: 15,
+    date: "12.03.2023",
+    actions: ["Añadir proto newsletter (success message)"],
+    version: "v.0.8.7",
+  },
 ];

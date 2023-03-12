@@ -1,19 +1,29 @@
 import { $, component$, useStore } from "@builder.io/qwik";
 
-export default component$(() => {
-  // EMAIL
+const formUrl = import.meta.env.VITE_MAILCHIMP_ENDPOINT;
 
-  const formUrl = import.meta.env.VITE_FORMSPREE_ENDPOINT;
+export default component$(() => {
   const formStore = useStore({
     email: "",
     isSubmitted: false,
+    isError: false,
   });
 
   const handleSubmit = $(async (event: any) => {
     event.preventDefault();
 
     // Use the Mailchimp API to submit the form data
+    let selectedEmail = formStore.email;
+    formStore.email = "";
+
+    // validate email
+    if (!selectedEmail || !selectedEmail.includes("@")) {
+      formStore.isError = true;
+      return;
+    }
+
     formStore.isSubmitted = true;
+    formStore.isError = false;
 
     const response = await fetch(formUrl, {
       method: "POST",
@@ -21,12 +31,8 @@ export default component$(() => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        email_address: formStore.email,
+        email_address: selectedEmail,
         status: "subscribed",
-        // merge_fields: {
-        //   FNAME: firstName,
-        //   LNAME: lastName
-        // }
       }),
     });
 
@@ -43,7 +49,7 @@ export default component$(() => {
   return (
     <form
       onSubmit$={handleSubmit}
-      action={import.meta.env.VITE_FORMSPREE_ENDPOINT}
+      action={formUrl}
       method="POST"
       noValidate
       target="_blank"
@@ -54,23 +60,27 @@ export default component$(() => {
         <strong>¡te recomiendo que te suscribas a mi newsletter!</strong>
       </p>
       <div class="flex flex-col gap-4">
+        {formStore.isError == true && (
+          <p class="text-red-500 text-xs">
+            ¡Por favor, introduce un email válido!
+          </p>
+        )}
         <label>
           <input
-            onChange$={(event) => (formStore.email = event.target.value)}
+            onChange$={(event) => {
+              formStore.email = event.target.value;
+            }}
             placeholder="Correo"
             type="email"
             name="EMAIL"
+            value={formStore.email}
           />
         </label>
 
         {formStore.isSubmitted ? (
           <p class="text-green-500 text-xs">¡Gracias por suscribirte!</p>
         ) : (
-          <button
-            class="custom-link max-w-fit mx-auto"
-            data-do-not-redirect
-            type="submit"
-          >
+          <button class="custom-link max-w-fit mx-auto" type="submit">
             Enviar
           </button>
         )}
