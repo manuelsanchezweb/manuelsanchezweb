@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import CustomLink from "~/components/custom-link";
+import Newsletter from "~/components/newsletter";
 
 export default component$(() => {
   return (
@@ -12,12 +12,7 @@ export default component$(() => {
         alt="Bajo Construcciones"
       />
       <h1 class="mt-6">manuelsanchezweb</h1>
-      <p>
-        ¡Ahora mismo estamos de construcciones, estoy preparando un montón de
-        contenido interesante para ti. Por ahora, puedes echarle un vistazo a
-        los cursos de Qwik que estoy preparando!
-      </p>
-      <CustomLink linkIntern url="/cursos/qwik/" text="Ver curso de Qwik" />
+      <Newsletter />
     </div>
   );
 });

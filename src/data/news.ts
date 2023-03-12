@@ -111,6 +111,12 @@ export const news = [
       "Añadir contenido completo sobre useSignal",
       "Añadir contenido completo sobre useStore",
     ],
-    version: "v.0.8.0",
+    version: "v.0.8.5",
+  },
+  {
+    id: 14,
+    date: "12.03.2023",
+    actions: ["Añadir proto newsletter (no validación)"],
+    version: "v.0.8.6",
   },
 ];
