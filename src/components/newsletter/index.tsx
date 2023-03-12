@@ -1,22 +1,27 @@
-import { $, component$, useSignal } from "@builder.io/qwik";
+import { $, component$, useStore } from "@builder.io/qwik";
 
 export default component$(() => {
   // EMAIL
 
   const formUrl = import.meta.env.VITE_FORMSPREE_ENDPOINT;
-  const email = useSignal("");
+  const formStore = useStore({
+    email: "",
+    isSubmitted: false,
+  });
 
   const handleSubmit = $(async (event: any) => {
     event.preventDefault();
 
     // Use the Mailchimp API to submit the form data
+    formStore.isSubmitted = true;
+
     const response = await fetch(formUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        email_address: email.value,
+        email_address: formStore.email,
         status: "subscribed",
         // merge_fields: {
         //   FNAME: firstName,
@@ -51,20 +56,24 @@ export default component$(() => {
       <div class="flex flex-col gap-4">
         <label>
           <input
-            onChange$={(event) => (email.value = event.target.value)}
+            onChange$={(event) => (formStore.email = event.target.value)}
             placeholder="Correo"
             type="email"
             name="EMAIL"
           />
         </label>
 
-        <button
-          class="custom-link max-w-fit mx-auto"
-          data-do-not-redirect
-          type="submit"
-        >
-          Enviar
-        </button>
+        {formStore.isSubmitted ? (
+          <p class="text-green-500 text-xs">¡Gracias por suscribirte!</p>
+        ) : (
+          <button
+            class="custom-link max-w-fit mx-auto"
+            data-do-not-redirect
+            type="submit"
+          >
+            Enviar
+          </button>
+        )}
       </div>
     </form>
   );
