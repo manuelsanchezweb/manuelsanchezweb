@@ -3,7 +3,7 @@ import {
   useStylesScoped$,
   useVisibleTask$,
 } from "@builder.io/qwik";
-import { DocumentHead } from "@builder.io/qwik-city";
+import type { DocumentHead } from "@builder.io/qwik-city";
 import hljs from "highlight.js";
 import typescript from "highlight.js/lib/languages/typescript";
 import styles from "highlight.js/styles/mono-blue.css?inline";

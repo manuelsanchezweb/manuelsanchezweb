@@ -13,7 +13,7 @@ export default component$(() => {
     event.preventDefault();
 
     // Use the Mailchimp API to submit the form data
-    let selectedEmail = formStore.email;
+    const selectedEmail = formStore.email;
     formStore.email = "";
 
     // validate email
